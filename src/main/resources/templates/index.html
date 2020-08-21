@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId= --------KEY------- "></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey= --------KEY------- "></script>
+    -->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=a5uuzm07nw"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4b9fd8cf0aaaaa7c2cee1b0de56603ea"></script>
+
+    <script src="ol.js"></script>
+    <link type="text/css" rel="stylesheet" href="ol.css"/>
+
+    <script src="proj4.js"></script>
+    <script src="linkGeo.js"></script>
+    <script src="nodeGeo.js"></script>
+
+    <script src="index.js"></script>
+
+    <title> Maps </title>
+</head>
+
+<body>
+
+    <div style="display:inline-block">
+        <div id="Map_Origin" style="width:800px; height: 600px; float:left"></div>
+        <div style="padding:20px; float:left">
+            <h1>구 네이버 좌표계</h1>
+            <h1>(현재 타임스에 적용된 좌표계)</h1>
+            <span id="projectionCode_Origin"></span>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div style="display:inline-block">
+        <div id="naverMapContainer" style="width: 800px; height: 600px; margin: 0; padding:0; position:relative; float:left">
+            <div id="Map_Naver" style="position: absolute; left:0px; top:0px; z-index: 1; width: 100%; height: 100%; margin: 0;  padding:0;"></div>
+            <div id="Map_Ol_Naver" style="position: absolute; left:0px; top:0px; z-index: 2; width: 100%; height: 100%; margin: 0; padding:0;"></div>
+        </div>
+        <div style="padding:20px; float:left">
+            <h1>네이버(신) 좌표계</h1>
+            <span id="projectionCode_Naver"></span>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div style="display:inline-block">
+        <div id="Map_Osm" style="position:relative; width:800px; height: 600px; float:left"></div>
+        <div style="padding:20px; float:left">
+            <h1>OSM</h1>
+            <span id="projectionCode_Osm"></span>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- 상위 div에서 position:relative; 스타일을 적용하고 하위에서 절대위치 지정 -->
+    <div style="display:inline-block">
+        <div id="kakaoMapContainer" style="width: 800px; height: 600px; margin: 0; padding:0; position:relative; float:left">
+            <div id="Map_Kakao" style="position: absolute; left:0px; top:0px; z-index: 1; width: 100%; height: 100%; margin: 0;  padding:0;"></div>
+            <div id="Map_Ol_Kakao" style="position: absolute; left:0px; top:0px; z-index: 2; width: 100%; height: 100%; margin: 0; padding:0;"></div>
+        </div>
+        <div style="padding:20px; float:left">
+            <h1>Daum KAKAO</h1>
+            <span id="projectionCode_Kakao"></span>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div style="display:inline-block">
+        <div id="Map_Vworld" style="width:800px; height: 600px; float:left"></div>
+        <div style="padding:20px; float:left">
+            <h1>V WORLD</h1>
+            <span id="projectionCode_Vworld"></span>
+        </div>
+    </div>
+
+    <hr/>
+
+</body>
+</html>
